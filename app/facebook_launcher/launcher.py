@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from os import listdir
 
-file_path_friends = "app/facebook_launcher/data/facebook_data/messages/inbox/"
+file_path_friends = "app/facebook_launcher/facebook_data/messages/inbox/"
 person_chat_count = {}
 chat_title_dictionary = {}
 total_counts = {}
