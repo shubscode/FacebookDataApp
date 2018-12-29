@@ -1,0 +1,26 @@
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - Facebook Tools</title>
+        {% else %}
+        <title> Facebook Tools </title>
+        {% endif %}
+    </head>
+    <body>
+        <div>
+            Facebook Tools:
+            <a href="{{ url_for('facebook') }}"> Message Counter</a>
+        </div>
+        <hr>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </body>
+</html>
