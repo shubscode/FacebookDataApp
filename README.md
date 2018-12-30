@@ -7,10 +7,12 @@ In order to use this application you will first need to download your facebook d
 
 Once you've done this, you're all set! Run the command `flask run` in order to launch the app. In a couple of seconds you should see the screen below: 
 
+![Alt text](https://github.com/shubscode/FacebookDataApp/blob/master/photos/mainScreenPhoto.png)
 
 Note: If you encounter problems when running the command `flask run` try the following command: `export FLASK_APP=facebook.py` and then try `flask run` again.
 
 Now that you are at the right page, Enter your name in the first box and a friends name in the second box and hit the "Count Messages!" button. If everything went well you should a screen like the one below:
 
+![Alt text]( https://github.com/shubscode/FacebookDataApp/blob/master/photos/secondScreenPhoto.png)
 
 Well, everything else should be pretty simple, feel free to try running the app with all your friends! If you have any ideas for future functionality that you would like to see definitely let me know!
