@@ -1,17 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Hi {{your_name}}!</h1>
+<body style="background-color:CornflowerBlue" text="white">
+    <h1 class="header_outline">Hi {{your_name}}!</h1>
     <div><p> You have a total of {{ message_count }} messages with {{ other_user }}.</b></p></div>
     <h3>Here is the breakdown:</h3>
     <OL>
     {% for chat in chat_counts.keys()%}
+        {% if chat in chat_counts.keys() and chat in my_part.keys() %}
         <LI> {{chat_counts[chat]}} messages in {{chat}} </LI>
         <UL>
             <LI> In which {{other_user}} has contributed {{chat_participation[chat]}} messages. Participation Rate: {{ ((chat_participation[chat] * 10000 / chat_counts[chat]) // 1) / 100}}</LI>
             <LI> In which you have contributed {{my_part[chat]}} messages. Participation Rate: {{ ((my_part[chat] * 10000 / chat_counts[chat]) // 1) / 100}}</LI>
         </UL>
+        {% endif %}
     {% endfor %}
     </OL>
     <div><p> {{ other_user }} has an average participation rate of {{ ((total_p * 10000 / message_count) // 1) / 100 }}.</b></p></div>
+</body>
 {% endblock %}
